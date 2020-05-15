@@ -9,7 +9,7 @@ from keras.models import *
 from keras.layers import *
 
 #Création d'un fichier data avec l'échantillon de clients
-data = pd.read_csv("/Users/Maghrani/Desktop/5eBD/machine_learning/instacart/instacart-market-basket-analysis/merged-sample.csv")
+data = pd.read_csv("/Users/TAHIRI/instacart/instacart-market-basket-analysis/merged-sample.csv")
 
 #vérification d'une order_id
 d=data.loc[data['order_id'] == 431534]
@@ -40,7 +40,7 @@ for client in data.groupby("user_id"):
 print("Liste des transactions de chaque client")
 print(Liste)
 
-df_products = importation_file("/Users/Maghrani/Desktop/5eBD/machine_learning/instacart/instacart-market-basket-analysis/products.csv")
+df_products = importation_file("/Users/TAHIRI/instacart/instacart-market-basket-analysis/products.csv")
 
 i=df_products.department_id.unique()
 print("unique categorie de produit",i)

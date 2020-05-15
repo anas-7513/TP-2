@@ -4,16 +4,16 @@ import numpy as np
 import csv
 
 # Dataframe train
-df_order_products_prior = importation_file("/Users/Maghrani/Desktop/5eBD/machine_learning/instacart/instacart-market-basket-analysis/order_products__prior.csv")
-df_orders = importation_file("/Users/Maghrani/Desktop/5eBD/machine_learning/instacart/instacart-market-basket-analysis/orders.csv")
-df_products = importation_file("/Users/Maghrani/Desktop/5eBD/machine_learning/instacart/instacart-market-basket-analysis/products.csv")
+df_order_products_prior = importation_file("/Users/TAHIRI/machine_learning/instacart/instacart-market-basket-analysis/order_products__prior.csv")
+df_orders = importation_file("/Users/TAHIRI/machine_learning/instacart/instacart-market-basket-analysis/orders.csv")
+df_products = importation_file("/Users/TAHIRI/machine_learning/instacart/instacart-market-basket-analysis/products.csv")
 
-def read_orders(N,path="/Users/Maghrani/Desktop/5eBD/instacart/instacart-market-basket-analysis/orders.csv"):
+def read_orders(N,path="/Users/TAHIRI/instacart/instacart-market-basket-analysis/orders.csv"):
     df_orders = pd.read_csv(path)
     df_orders = df_orders[['order_id','user_id']]
     return df_orders[df_orders['user_id'].isin(range(N+1))]
 
-def read_orders_products(path="/Users/Maghrani/Desktop/5eBD/machine_learning/instacart/instacart-market-basket-analysis/order_products__prior.csv"):
+def read_orders_products(path="/Users/TAHIRI/instacart/instacart-market-basket-analysis/order_products__prior.csv"):
     orders_products_df=pd.read_csv(path)
     return orders_products_df[['order_id','product_id']]
 
